@@ -1,0 +1,57 @@
+//just a import and main styles
+@import "imports.scss";
+//main styles :
+@font-face {
+    font-family: "iransans";
+    src: url("./IRANSans/WebFonts/fonts/ttf/IRANSansWeb.ttf") format("truetype"), url("./IRANSans/WebFonts/fonts/woff/IRANSansWeb.woff") format("woff");
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    box-sizing: border-box;
+}
+
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+p::selection {
+    background-color: $main-color;
+    color: white;
+}
+
+body {
+    font-size: 14px;
+    text-align: right;
+    direction: rtl;
+    line-height: 30px;
+    figure {
+        line-height: 0;
+    }
+    font-family: 'iransans';
+}
+
+.flex {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.justify {
+    justify-content: space-between;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+.line {
+    width: 100%;
+    background-color: #ddd;
+    height: 1px;
+    margin: 30px 0px;
+}

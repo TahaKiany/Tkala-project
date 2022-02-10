@@ -1,0 +1,82 @@
+header {
+    width: 100%;
+    box-shadow: 2px 2px 5px #333;
+    margin-bottom: 4px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    opacity: .79;
+    background-color: $main-color;
+    .main-menu {
+        width: 70%;
+        ul {
+            width: 100%;
+            overflow: hidden;
+            li {
+                list-style-type: none;
+                float: right;
+                margin: 5px 10px;
+                a {
+                    &::after,
+                    &::before {
+                        content: "";
+                        width: 1%;
+                        transition: 1s;
+                        display: block;
+                        height: 2px;
+                        background-color: $main-color;
+                    }
+                    @include a;
+                    color: white;
+                    display: block;
+                    font-size: 16px+.5;
+                    padding: 10px 14px;
+                    border-radius: 10px;
+                    transition: .7s;
+                    &:hover {
+                        &::after,
+                        &::before {
+                            width: 100%;
+                        }
+                        background-color: $mix-color;
+                        font-size: 18px - .5;
+                        i {
+                            margin-left: 8px;
+                        }
+                    }
+                    i {
+                        font-size: 18px;
+                        transition: .7s;
+                        margin-left: 6px;
+                    }
+                }
+            }
+        }
+    }
+    .sign-enter {
+        width: 30%;
+        text-align: left;
+        a {
+            display: inline-block;
+            padding: 10px 14px;
+            margin: 5px 0px;
+            @include a;
+            background-color: #ffffff;
+            border-radius: 10px;
+            transition: .7s;
+            &:hover {
+                background-color: $mix-color;
+                color: #ffffff;
+                i {
+                    margin-left: 8px;
+                    color: #ffffff;
+                }
+            }
+            i {
+                font-size: 18px;
+                margin-left: 6px;
+                transition: .7s;
+            }
+        }
+    }
+}
